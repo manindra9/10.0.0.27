@@ -1,0 +1,6 @@
+#facter to display the file in /tmp
+Facter.add('list_sch_output') do
+  setcode do
+    Facter::Util::Resolution.exec('/bin/cat /tmp/error.log')
+  end
+end
